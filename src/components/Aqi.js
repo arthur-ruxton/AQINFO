@@ -81,19 +81,19 @@ const Aqi = () => {
   );
   //------------------------------------------------------------------------//
   
-  const GOOGLE_MAPS_API_KEY = process.env["GOOGLE_MAPS_API_KEY"]
-  const WEATHER_API_KEY = process.env["WEATHER_API_KEY"]
+  // const GOOGLE_MAPS_API_KEY = process.env["GOOGLE_MAPS_API_KEY"]
+  // const WEATHER_API_KEY = process.env["WEATHER_API_KEY"]
 
   return (
     <div>
       <div className='map-div'>
-        <Wrapper apiKey={GOOGLE_MAPS_API_KEY} render={render}>
+        <Wrapper apiKey='PutKeyHere' render={render}>
           <Map
             center={center}
             onClick={onClick}
             onIdle={onIdle}
             zoom={zoom}
-            style={{ flexGrow: "1", height: "100%" }}
+            style={{ flexGrow: "1", height: "600px" }}
           >
             {clicks.map((latLng, i) => (
               <Marker key={i} position={latLng} />
