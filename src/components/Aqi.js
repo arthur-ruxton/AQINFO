@@ -87,7 +87,7 @@ const Aqi = () => {
   return (
     <div>
       <div className='map-div'>
-        <Wrapper apiKey='PutKeyHere' render={render}>
+        <Wrapper apiKey={process.env.REACT_APP_MAPS_KEY} render={render}>
           <Map
             center={center}
             onClick={onClick}

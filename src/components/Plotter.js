@@ -9,7 +9,7 @@ const Plotter = () => {
   useEffect(() => {
     const getAq = async () => {
       try {
-        const response = await axios.get('http://api.openweathermap.org/data/2.5/air_pollution?lat=0&lon=51&appid=PutKeyHere')
+        const response = await axios.get(`http://api.openweathermap.org/data/2.5/air_pollution?lat=0&lon=51&appid=${process.env.REACT_APP_AQI_KEY}`)
         console.log('response', response.data.list[0].components)
         setAqi(response.data.list[0].components)
       } catch (error) {
