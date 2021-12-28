@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  padding: 10px 100px 10px 100px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -15,6 +19,12 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.mapp-to-aqi-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 /* @keyframes App-logo-spin {

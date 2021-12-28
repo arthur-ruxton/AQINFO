@@ -54,6 +54,8 @@ const Map = ({
   )
 }
 
+//---------------------- callback functions -----------------------//
+
 export const isLatLngLiteral = (obj) =>
   obj != null &&
   typeof obj === "object" &&
