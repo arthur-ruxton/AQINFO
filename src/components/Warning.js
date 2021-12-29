@@ -4,6 +4,7 @@ import axios from 'axios'
 
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
+import { ExclamationTriangle } from 'react-bootstrap-icons';
 
 const Warning = ({ location }) => {
   const [ warning, setWarning ] = useState('')
@@ -15,7 +16,7 @@ const Warning = ({ location }) => {
         if(data.alerts){
           setWarning(data.alerts[0].description)
         } else {
-          setWarning('No Weather Warnings')
+          setWarning('Currently No Warnings')
         }
       } catch (error) {
         console.log(error)
@@ -30,12 +31,16 @@ const Warning = ({ location }) => {
 
   return (
     <>
-      <Button onClick={handleShowWarning}>
-        Weather Warning
+      <Button onClick={handleShowWarning} className='button'>
+        <ExclamationTriangle/>
       </Button>
-      <Modal show={showWarning} onHide={handleCloseWarning} size="lg">
+      <Modal 
+      show={showWarning} 
+      onHide={handleCloseWarning} 
+      size="lg" 
+      className='popup'>
         <Modal.Header closeButton>
-          <Modal.Title>!</Modal.Title>
+          <Modal.Title>Weather Warning</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {warning}

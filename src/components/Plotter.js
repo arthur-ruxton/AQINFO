@@ -4,6 +4,7 @@ import axios from 'axios'
 import Plot from 'react-plotly.js';
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
+import { BarChart } from 'react-bootstrap-icons';
 
 const Plotter = ({ location }) => {
   const [ aqi, setAqi ] = useState({})
@@ -27,23 +28,41 @@ const Plotter = ({ location }) => {
 
   return (
     <>
-      <Button onClick={handleShowAqi}>
-        Air Quality Index
+      <Button onClick={handleShowAqi} className="button">
+        <BarChart/> AQI
       </Button>
-      <Modal show={showAqi} onHide={handleCloseAqi} size="lg">
+      <Modal 
+      show={showAqi} 
+      onHide={handleCloseAqi} 
+      size="lg" 
+      className='popup'
+      id='chart-modal'>
         <Modal.Header closeButton>
-          <Modal.Title>Local air quality - Pollutant concentration in μg/m3</Modal.Title>
+          <Modal.Title>Local air quality</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Plot className="plotter"
+          <Plot 
             data={[
               {
                 x: ['CO', 'NO', 'NO2', 'O', 'SO2', 'NH3', 'PM2.5', 'PM10'],
                 y: [aqi.co, aqi.no, aqi.no2, aqi.o3, aqi.so2, aqi.nh3, aqi.pm2_5, aqi.pm10],
-                type: 'bar'
+                type: 'bar',
+                marker: {
+                  color: '#75483e',
+                  opacity: 0.6,
+                }
               }
             ]}
-            layout={ {yaxis: {title: 'Concentration'}} }
+            layout={{
+              title: 'PC = Pollutant concentration (μg/m3)',
+              yaxis: {title: 'PC'},
+              font: {
+                family: 'Epilogue, sans-serif',
+                size: 15
+              },
+              bargap: 0.05,
+              showlegend: true
+            }}
           />
         </Modal.Body>
       </Modal>

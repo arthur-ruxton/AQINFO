@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
+import { HandIndexThumb } from 'react-bootstrap-icons';
 
 import { Wrapper } from "@googlemaps/react-wrapper" // import for map
 
 import Map from './Map'
 import Marker from './Marker'
-import Donate from './Donate'
 import Warning from './Warning'
 import Plotter from './Plotter' //make req & plot data on chart.//
 
@@ -58,13 +58,12 @@ const Aqi = () => {
         </Wrapper>
       </div>
       <div className="options-div">
-      <Donate />
         { click ?
         <>
           <Plotter location={location}/>
           <Warning location={location}/>
         </> :
-        <></>
+        <h5>Select a location <HandIndexThumb/></h5>
         }
       </div>
     </div>
