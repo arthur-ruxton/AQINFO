@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import { Wrapper } from "@googlemaps/react-wrapper" // import for map
 
+import Warning from './Warning'
 import Plotter from './Plotter' //make req & plot data on chart.//
 import Map from './Map'
 import Marker from './Marker'
@@ -74,6 +75,7 @@ const Aqi = () => {
           </Modal.Body>
         </Modal>
       </div>
+      <Warning location={location}/>
     </div>
   )
 }

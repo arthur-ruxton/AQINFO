@@ -12,7 +12,6 @@ const Plotter = ({ location }) => {
         const response = await axios.get(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${location.lat}&lon=${location.lng}&appid=${process.env.REACT_APP_AQI_KEY}`)
         console.log('response', response.data.list[0].components)
         setAqi(response.data.list[0].components)
-        console.log('location', location)
       } catch (error) {
         console.log(error)
       }
