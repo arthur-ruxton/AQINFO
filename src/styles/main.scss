@@ -1,5 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 
+@import "header";
+
 .App {
   text-align: center;
 }
@@ -10,18 +12,20 @@
 
 body {
   padding: 10px 10px 10px 10px;
+  background-color: black;
+  font-family: 'Epilogue', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+// .App-header {
+//   background-color: #282c34;
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: calc(10px + 2vmin);
+//   color: white;
+// }
 
 // .mapp-to-aqi-div {
 //   width: 100%;
@@ -35,14 +39,3 @@ body {
   height: 650px;
   margin: 0px;
 }
-
-
-
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
