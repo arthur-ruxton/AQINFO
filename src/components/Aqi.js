@@ -2,12 +2,10 @@ import React, { useState } from 'react'
 
 import { Wrapper } from "@googlemaps/react-wrapper" // import for map
 
-import Warning from './Warning'
-import Plotter from './Plotter' //make req & plot data on chart.//
 import Map from './Map'
 import Marker from './Marker'
-import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
+import Warning from './Warning'
+import Plotter from './Plotter' //make req & plot data on chart.//
 
 const render = (status) => {
   return <h1>{status}</h1>;
@@ -40,10 +38,6 @@ const Aqi = () => {
     setCenter(m.getCenter().toJSON())
   };
   //------------------------------------------------------------------------//
-
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   
    const mapKey = process.env.REACT_APP_MAPS_KEY
 
@@ -62,20 +56,13 @@ const Aqi = () => {
           </Map>
         </Wrapper>
       </div>
-      <div className="plot-div">
-        <Button onClick={handleShow}>
-          Air Quality Index
-        </Button>
-        <Modal show={show} onHide={handleClose} size="lg">
-          <Modal.Header closeButton>
-           <Modal.Title>Local air quality - Pollutant concentration in μg/m3</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Plotter location={location}/>
-          </Modal.Body>
-        </Modal>
-      </div>
-      <Warning location={location}/>
+      { click ?
+      <div className="options-div">
+        <Plotter location={location}/>
+        <Warning location={location}/>
+      </div> :
+      <></>
+    }
     </div>
   )
 }

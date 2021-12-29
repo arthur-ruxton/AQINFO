@@ -2,8 +2,11 @@ import React from 'react'
 import { useState, useEffect } from 'react' 
 import axios from 'axios'
 
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button'
+
 const Warning = ({ location }) => {
-  const [ warning, setWarning ] = useState({})
+  const [ warning, setWarning ] = useState('')
 
   useEffect(() => {
     const getAq = async () => {
@@ -21,15 +24,24 @@ const Warning = ({ location }) => {
     getAq()
   }, [location])
 
-
-  console.log('warning response', warning)
+  const [showWarning, setShowWarning] = useState(false);
+  const handleCloseWarning = () => setShowWarning(false);
+  const handleShowWarning = () => setShowWarning(true);
 
   return (
-    <div>
-      <p>
-        {warning}
-      </p>
-    </div>
+    <>
+      <Button onClick={handleShowWarning}>
+        Weather Warning
+      </Button>
+      <Modal show={showWarning} onHide={handleCloseWarning} size="lg">
+        <Modal.Header closeButton>
+          <Modal.Title>!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {warning}
+        </Modal.Body>
+      </Modal>
+    </>
   )
 }
 
