@@ -5,6 +5,8 @@ import { Wrapper } from "@googlemaps/react-wrapper" // import for map
 import Plotter from './Plotter' //make req & plot data on chart.//
 import Map from './Map'
 import Marker from './Marker'
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button'
 
 const render = (status) => {
   return <h1>{status}</h1>;
@@ -37,6 +39,10 @@ const Aqi = () => {
     setCenter(m.getCenter().toJSON())
   };
   //------------------------------------------------------------------------//
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   
    const mapKey = process.env.REACT_APP_MAPS_KEY
 
@@ -49,13 +55,25 @@ const Aqi = () => {
             onClick={onClick}
             onIdle={onIdle}
             zoom={zoom}
-            style={{ width: "400px", height: "400px" }}
+            style={{ height: "650px" }}
           >
             <Marker position={click} />
           </Map>
         </Wrapper>
       </div>
-      <Plotter location={location}/>
+      <div className="plot-div">
+        <Button onClick={handleShow}>
+          Air Quality Index
+        </Button>
+        <Modal show={show} onHide={handleClose} size="lg">
+          <Modal.Header closeButton>
+           <Modal.Title>Local air quality - Pollutant concentration in μg/m3</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Plotter location={location}/>
+          </Modal.Body>
+        </Modal>
+      </div>
     </div>
   )
 }

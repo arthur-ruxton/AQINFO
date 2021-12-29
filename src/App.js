@@ -1,4 +1,3 @@
-import './App.css';
 import Aqi from './components/Aqi'
 
 function App() {

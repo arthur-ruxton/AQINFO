@@ -21,15 +21,15 @@ const Plotter = ({ location }) => {
   }, [location])
 
   return (
-    <Plot 
+    <Plot className="plotter"
       data={[
         {
-          x: ['Carbon Monoxide', 'Nitrogen Oxide', 'Nitrogen Dioxide', 'Ozone', 'Sulphur Dioxide', 'Ammonia', 'PM2.5', 'PM10'],
+          x: ['CO', 'NO', 'NO2', 'O', 'SO2', 'NH3', 'PM2.5', 'PM10'],
           y: [aqi.co, aqi.no, aqi.no2, aqi.o3, aqi.so2, aqi.nh3, aqi.pm2_5, aqi.pm10],
           type: 'bar'
         }
       ]}
-      layout={ {title: 'Local air quality', yaxis: {title: 'Pollutant concentration in μg/m3'}} }
+      layout={ {yaxis: {title: 'Concentration'}} }
     />
   )
 }
