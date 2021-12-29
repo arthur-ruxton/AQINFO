@@ -4,6 +4,7 @@ import { Wrapper } from "@googlemaps/react-wrapper" // import for map
 
 import Map from './Map'
 import Marker from './Marker'
+import Donate from './Donate'
 import Warning from './Warning'
 import Plotter from './Plotter' //make req & plot data on chart.//
 
@@ -56,13 +57,16 @@ const Aqi = () => {
           </Map>
         </Wrapper>
       </div>
-      { click ?
       <div className="options-div">
-        <Plotter location={location}/>
-        <Warning location={location}/>
-      </div> :
-      <></>
-    }
+      <Donate />
+        { click ?
+        <>
+          <Plotter location={location}/>
+          <Warning location={location}/>
+        </> :
+        <></>
+        }
+      </div>
     </div>
   )
 }
