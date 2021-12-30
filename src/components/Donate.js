@@ -17,7 +17,7 @@ const Donate = () => {
       </Button>
       <Modal show={showDonate} onHide={handleCloseDonate} className='popup'>
         <Modal.Header closeButton>
-          <Modal.Title>Donate</Modal.Title>
+          <Modal.Title>Donate to charity</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <p><a href="https://www.foei.org/" target="_blank" rel="noreferrer">FRIENDS OF THE EARTH</a></p>

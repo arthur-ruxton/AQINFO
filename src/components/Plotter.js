@@ -67,6 +67,13 @@ const Plotter = ({ location }) => {
       size: 15
     },
   }
+  const config = {
+    responsive: true,
+    displayModeBar: true,
+    displaylogo: false,
+    modeBarButtonsToRemove: 
+    ['pan2d','select2d','lasso2d','resetScale2d', 'zoom', 'zoomIn2d','zoomOut2d', 'autoscale', 'plotly-logomark'],
+  }
   //-----------------------------------------------//
   return (
     <>
@@ -82,9 +89,11 @@ const Plotter = ({ location }) => {
           <Modal.Title>Local air quality - {wordQualityIndicator}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Plot className="plot"
+          <Plot 
+          className="plot"
           data={data}
           layout={layout}
+          config={config}
           />
         </Modal.Body>
       </Modal>
