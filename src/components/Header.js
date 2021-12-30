@@ -1,7 +1,5 @@
 import React from 'react'
 import { Globe } from 'react-bootstrap-icons';
-
-
 import Donate from './Donate'
 
 const Header = () => {
