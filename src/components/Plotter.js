@@ -22,10 +22,35 @@ const Plotter = ({ location }) => {
     getAq()
   }, [location])
 
+  //----------------- modal funcs ---------------//
   const [showAqi, setShowAqi] = useState(false);
   const handleCloseAqi = () => setShowAqi(false);
   const handleShowAqi = () => setShowAqi(true);
-
+  //---------------------------------------------//
+  //------------------ plot content -------------//
+  const data= [
+    {
+      x: ['CO', 'NO', 'NO2', 'O', 'SO2', 'NH3', 'PM2.5', 'PM10'],
+      y: [aqi.co, aqi.no, aqi.no2, aqi.o3, aqi.so2, aqi.nh3, aqi.pm2_5, aqi.pm10],
+      type: 'bar',
+      marker: {
+        color: '#75483e',
+        opacity: 0.6,
+      }
+    }
+  ]
+  const layout={
+    bargap: 0.05,
+    showlegend: true,
+    title: 'PC = Pollutant concentration (μg/m3)',
+    yaxis: {title: 'PC'},
+    margin: { l: 'auto', r: 'auto', b: 'auto', t: 'auto', pad: 6 },
+    font: {
+      family: 'Epilogue, sans-serif',
+      size: 15
+    },
+  }
+  //-----------------------------------------------//
   return (
     <>
       <Button onClick={handleShowAqi} className="button">
@@ -34,35 +59,15 @@ const Plotter = ({ location }) => {
       <Modal 
       show={showAqi} 
       onHide={handleCloseAqi} 
-      size="lg" 
       className='popup'
-      id='chart-modal'>
+      dialogClassName='modal-90w'>
         <Modal.Header closeButton>
           <Modal.Title>Local air quality</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Plot 
-            data={[
-              {
-                x: ['CO', 'NO', 'NO2', 'O', 'SO2', 'NH3', 'PM2.5', 'PM10'],
-                y: [aqi.co, aqi.no, aqi.no2, aqi.o3, aqi.so2, aqi.nh3, aqi.pm2_5, aqi.pm10],
-                type: 'bar',
-                marker: {
-                  color: '#75483e',
-                  opacity: 0.6,
-                }
-              }
-            ]}
-            layout={{
-              title: 'PC = Pollutant concentration (μg/m3)',
-              yaxis: {title: 'PC'},
-              font: {
-                family: 'Epilogue, sans-serif',
-                size: 15
-              },
-              bargap: 0.05,
-              showlegend: true
-            }}
+          <Plot className="plot"
+          data={data}
+          layout={layout}
           />
         </Modal.Body>
       </Modal>

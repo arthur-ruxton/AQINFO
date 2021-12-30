@@ -3,7 +3,30 @@
   a {
     text-decoration: none;
   }
-  // .chart-modal {
-  //   padding: 40px;
-  // }
+}
+.modal-90w {
+  display: flex;
+  justify-content: center;
+  max-width: 650px!important;
+}
+
+.plot {
+  width: 100%!important;
+  height: 600px!important;
+  .plot-container {
+    width: 100%!important;
+    height: 100%!important;
+    .user-select-none {
+      width: 100%!important;
+      height: 100%!important;
+      .main-svg {
+        width: 100%;
+        height: 100%!important;
+        .draglayer{
+          max-width: 100%!important;
+          height: 100%!important;
+        }
+      }
+    }
+  }  
 }
