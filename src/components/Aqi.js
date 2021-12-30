@@ -51,7 +51,7 @@ const Aqi = () => {
             onClick={onClick}
             onIdle={onIdle}
             zoom={zoom}
-            style={{ height: "650px" }}
+            style={{ height: "550px" }}
           >
             <Marker position={click} />
           </Map>

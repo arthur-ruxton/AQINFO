@@ -1,0 +1,18 @@
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #c3ecb2;
+  background-color: black;
+  gap: 20px;
+  .social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px
+  }
+}
