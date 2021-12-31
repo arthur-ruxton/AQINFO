@@ -12,7 +12,7 @@ const Warning = ({ location }) => {
   useEffect(() => {
     const getAq = async () => {
       try {
-        const { data } = await axios.get(`http://api.openweathermap.org/data/2.5/onecall?lat=${location.lat}&lon=${location.lng}&exclude=current,hourly,daily&appid=${process.env.REACT_APP_AQI_KEY}`)
+        const { data } = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${location.lat}&lon=${location.lng}&exclude=current,hourly,daily&appid=${process.env.REACT_APP_AQI_KEY}`)
         if(data.alerts){
           setWarning(data.alerts[0].description)
         } else {
