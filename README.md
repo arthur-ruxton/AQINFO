@@ -1,4 +1,6 @@
-# AQINFO - air quality information
+# :globe_with_meridians: AQINFO - air quality information
+
+The live site: [AQINFO](https://aqinfo.netlify.app/)
 
 ### Aim
 In less than a week, build a React app with API requests and data visualisation.
@@ -72,7 +74,7 @@ In less than a week, build a React app with API requests and data visualisation.
 
 
 <details>
-  <summary>Key learnings:</summary>
+  <summary>Key learnings</summary>
   <ul>
     <li>Plotly.js - a great library for creating dynamic data visualisations - getting practice implementing it with React and customising their components.</li>
     <li>Google maps API, useful for all kinds of applications.</li>
@@ -81,7 +83,7 @@ In less than a week, build a React app with API requests and data visualisation.
 </details>
 
 <details>
-  <summary>Challenges:</summary>
+  <summary>Challenges</summary>
   <ul>
     <li>Converting from typescript to JavaScript</li>
     <li>Customising plotly components & React app implementation</li>
@@ -90,7 +92,7 @@ In less than a week, build a React app with API requests and data visualisation.
 </details>
 
 <details>
-  <summary>Possible future improvements:</summary>
+  <summary>Possible future improvements</summary>
   <ul>
     <li>More visually interesting / impactful data visualisation</li>
     <li>More features (request other kinds of data relevant to the subject) </li>
@@ -99,6 +101,6 @@ In less than a week, build a React app with API requests and data visualisation.
 </details>
 
 <details>
-  <summary>Bugs:</summary>
+  <summary>Bugs</summary>
   <p>The App is almost fully responsive but the title of the bar chart does not fit on the screen as intended.</p>
 </details>
