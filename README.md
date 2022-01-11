@@ -2,8 +2,10 @@
 
 The live site: [AQINFO](https://aqinfo.netlify.app/)
 
-### Aim
-In less than a week, build a React app with API requests and data visualisation.
+<details>
+  <summary>Aim</summary>
+  <p>In less than a week, build a React app with API requests and data visualisation.</p>
+</details>
 
 <details>
   <summary>Overview</summary>
