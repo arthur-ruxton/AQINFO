@@ -82,17 +82,24 @@
       This is a <em>simple request: pass in the coordinates retrieved from the map’s click handler function. – I store the response data in stateful variables that       are updated whenever a new request is made</em> - This all happens within a <em>UseEffect hook</em> so the request is only made if the location changes: 
     </p> <br>
     <img src="https://user-images.githubusercontent.com/89402596/149630538-ed865a16-35f8-4ea1-9c58-36f43349f981.png" /> <br>
-    
+    <p>
+     At this point a user can select a location on a map, then a request is made to the open-weather-map-api for the air quality data of that chosen location.            <em>Pass the data into the bar chart</em> instance, labelling it appropriately.
+    </p> <br>
+    <img src="https://user-images.githubusercontent.com/89402596/149630819-1be3d0fb-ed46-46b4-8bde-7d614fda11b3.png" /> <br>
+    <p>
+      I also <em>use conditional logic to colour-code the bar chart based on the air-quality - this makes the data visualisations more impactful and dynamic.</em>
+    </p>
+    <img src="https://user-images.githubusercontent.com/89402596/149630902-96ba51fd-ee24-4c96-89af-e77020bb48f1.png" /> <br>
+    <p>Plotly charts can be configured in various ways:</p> <br>
+    <img src="https://user-images.githubusercontent.com/89402596/149630940-874a3b72-a4c9-47d1-8669-8278419eeb18.png" /> <br>
+    <p>
+      <em>The Weather Warnings component was made in much the same way - simply passing the coordinates retrieved from the users click event as props then using           them in an API request and displaying the response data.</em>
+    <p>
  </div>
 </details>
-
-
-
-
-
-
+  
 <details>
-  <summary>Visuals</summary>
+  <summary>Visuals :art:</summary>
   <p>Landing page</p>
   <img src=https://user-images.githubusercontent.com/89402596/148824744-aaed67af-a7df-452f-b99a-beb7b4a0cb5a.png />
   <p>AQI data visualisatioin</p>
@@ -102,7 +109,6 @@
   <p>Donate to charity</p>
   <img src=https://user-images.githubusercontent.com/89402596/148825088-d0e95f40-406e-4325-b6af-15c15234f2ff.png />
 </details>
-
 
 <details>
   <summary>Key learnings :open_book:</summary>
@@ -123,7 +129,7 @@
 </details>
 
 <details>
-  <summary>Possible future improvements</summary>
+  <summary>Possible future improvements :flight_departure:</summary>
   <ul>
     <li>More visually interesting / impactful data visualisation</li>
     <li>More features (request other kinds of data relevant to the subject) </li>
@@ -132,6 +138,6 @@
 </details>
 
 <details>
-  <summary>Bugs</summary>
+  <summary>Bugs :bug:</summary>
   <p>The App is almost fully responsive but the title of the bar chart does not fit on the screen as intended.</p>
 </details>
