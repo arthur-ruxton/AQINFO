@@ -8,7 +8,7 @@ The live site: [AQINFO](https://aqinfo.netlify.app/)
 </details>
 
 <details>
-  <summary>Overview</summary>
+  <summary>Overview :bulb:</summary>
   <p>
     Select a location, anywhere in the world, using pin-drop on a map or satellite image. You can then view a data visualisation about the air quality in your           chosen location - this comes in the form of a colour coded bar chart accompanied by a short description of the air quality. You can also view weather warnings       for the area you’ve chosen - at the moment these are written in English whenever possible.
   </p>
@@ -18,7 +18,7 @@ The live site: [AQINFO](https://aqinfo.netlify.app/)
 </details>
 
 <details>
-  <summary>Tech</summary>
+  <summary>Tech :gear:</summary>
   <ul>
     <li>
       <details>
@@ -45,7 +45,7 @@ The live site: [AQINFO](https://aqinfo.netlify.app/)
 </details>
 
 <details>
-  <summary>Approach</summary>
+  <summary>Approach :desktop_computer:</summary>
   <h5>Beginning - planning :</h5>
   <p>
     I knew I wanted to create a dynamic data visualisation site - So a user could search a location and get visual data back. After doing some research I landed on     Google Maps Javascript Api and OpenWeatherMap Api for requesting data. My brother had done work with an open source graphing library called Plotly.js and           recommended it. 
@@ -76,7 +76,7 @@ The live site: [AQINFO](https://aqinfo.netlify.app/)
 
 
 <details>
-  <summary>Key learnings</summary>
+  <summary>Key learnings :open_book:</summary>
   <ul>
     <li>Plotly.js - a great library for creating dynamic data visualisations - getting practice implementing it with React and customising their components.</li>
     <li>Google maps API, useful for all kinds of applications.</li>
@@ -85,7 +85,7 @@ The live site: [AQINFO](https://aqinfo.netlify.app/)
 </details>
 
 <details>
-  <summary>Challenges</summary>
+  <summary>Challenges & Wins :chart_with_upwards_trend:</summary>
   <ul>
     <li>Converting from typescript to JavaScript</li>
     <li>Customising plotly components & React app implementation</li>
