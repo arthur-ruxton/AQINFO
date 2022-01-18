@@ -37,19 +37,11 @@
 <details>
   <summary>Approach :desktop_computer:</summary>
   <div>
-    <h3>Beginning - planning :</h3>
+    <h3>Planning :</h3>
     <p>
-      I knew I wanted to create a dynamic data visualisation site - So a user could search a location and get visual data back. After doing some research I landed         on Google Maps Javascript Api and OpenWeatherMap Api for requesting data. My brother had done work with an open source graphing library called Plotly.js and         recommended it. 
-    </p>
-    <p>I started a trello board for my project planning as usual, with ‘to-do’, ‘doing’ and ‘done lists’ + wireframes & pseudo-code.</p>
-    <h5>Middle - bulk of the project :</h5>
-    <p>As it turns out the Google maps JavaScript api involves typescript which I was unfamiliar with, this had to be altered to work in a React app.</p>
-    <p>
-      Fairly quickly I was able to get coordinates from the mapp and store them as stateful variables, then make requests to OpenWeatherMap for the relevant data.
-    </p>
-    <h5>End - polishing & testing :</h5>
-    <p>
-      It was then just a case of plotting the data on a bar chart and bringing the UX up to scratch. Working with plotly.js was challenging at times - there are not       many examples of React implementation online and the components are difficult to customise in some ways. 
+      I chose Google Maps JavaScript Api and OpenWeatherMap Api for requesting data and an open source graphing library called Plotly.js for data visualisation. 
+      Using a Trello board as usual, I mapped out the development process, with ‘to-do’, ‘doing’ and ‘done lists’ + wireframes & pseudo-code. 
+      <img src="https://user-images.githubusercontent.com/89402596/150000317-24988001-bf71-4312-a063-48185ccf95cc.png" />
     </p>
   </div>
   <div>
